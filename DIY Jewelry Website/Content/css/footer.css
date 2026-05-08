@@ -1,0 +1,89 @@
+﻿/* Footer */
+
+fab {
+    color: #76442d;
+}
+
+.footer {
+    display: flex;
+    margin-top: 150px;
+    width: auto;
+    padding: 100px 15%;
+    background: #f4e7c4;
+    color: darkgrey;
+}
+
+.footer div {
+    text-align: center;
+}
+
+.col-2 {
+    flex-grow: 2;
+}
+
+.footer div h3 {
+    font-weight: 600;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.col-1 a {
+    display: block;
+    text-decoration: none;
+    color: darkgrey;
+    margin-bottom: 10px;
+}
+
+form input {
+    width: 400px;
+    height: 45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    outline: none;
+    border: none;
+}
+
+form button {
+    background: transparent;
+    border: 2px solid #7c4936c7;
+    color: #7c4936c7;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    color: #76442d;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons i {
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #7c4936c7;
+    transition: all 0.3s ease;
+}
+
+.social-icons i:hover {
+    color: #76442d;
+}
+
+.comlogo {
+    text-decoration: none;
+}
+
+footer {
+    background: #76442d;
+    color: white;
+    padding: 20px;
+}
+/* End of footer */

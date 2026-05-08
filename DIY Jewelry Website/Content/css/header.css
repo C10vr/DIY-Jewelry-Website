@@ -1,0 +1,84 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    color: #76442d;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+p {
+    color: #7c4936c7;
+}
+
+/* Header */
+
+header {
+    background: #f4e7c4;
+    padding: 20px;
+}
+
+.header-container {
+    margin: 0px;
+}
+
+.header-quote {
+    padding: 100px;
+}
+
+.logo-box {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 215px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.top-bar {
+    display: flex;
+    gap: 50px;
+    padding: 10px 35px 0 0;
+}
+
+.top-bar h2 {
+    font-size: 3vh;
+    font-weight: 300;
+    transition: transform 0.2s ease;
+}
+
+.top-bar h2:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+.cta-button {
+    background: #7c4936c7;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #76442d;
+}
+
+.why-us-button {
+    padding-top: 15px;
+    display: flex;
+    width: 135px;
+}
+
+/* End of Content */
