@@ -34,7 +34,7 @@
                 <div class="top-bar">
                     <h2>Join Us</h2>
                     <h2>About Us</h2>
-                    <h2>Log In</h2>
+                    <a href="Login.aspx" style="text-decoration: none; color: inherit;"><h2>Log In</h2></a>
                 </div>
 
                 <!-- Responsive Hamburger --> 
