@@ -21,6 +21,11 @@ header {
     padding: 20px;
 }
 
+header.sticky {
+    position: sticky;
+    top: 0;
+}
+
 .header-container {
     margin: 0px;
 }
@@ -46,7 +51,7 @@ header {
 .top-bar {
     display: flex;
     gap: 50px;
-    padding: 10px 35px 0 0;
+    padding: 15px 35px 0 0;
 }
 
 .top-bar h2 {
