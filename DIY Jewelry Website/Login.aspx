@@ -55,7 +55,9 @@
     <form id="form1" runat="server">
         <div class="login-wrapper">
             <div class="login-box">
-                <h2>Account Login</h2>
+                <h2>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [userTable]"></asp:SqlDataSource>
+                    Account Login</h2>
                 
                 <div class="input-group">
                     <label>Username</label>
