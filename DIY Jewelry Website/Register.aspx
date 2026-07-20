@@ -55,7 +55,8 @@
     <form id="form1" runat="server">
         <div class="register-wrapper">
             <div class="register-box">
-                <h2>Create an Account</h2>
+                <h2>Create an Account<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [userTable]"></asp:SqlDataSource>
+                </h2>
                 
                 <div class="input-group">
                     <label>Full Name</label>
