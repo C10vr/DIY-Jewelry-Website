@@ -11,27 +11,11 @@
     <link rel="stylesheet" href="../Content/css/header.css"/>    
     <link rel="stylesheet" href="../Content/css/body.css"/> 
     <link rel="stylesheet" href="../Content/css/footer.css"/> 
+    <link rel="stylesheet" href="../Content/css/login.css"/> 
 
     <script src="https://kit.fontawesome.com/cf1d4ca410.js" crossorigin="anonymous"></script>
-    
-    <style>
-        /* login box */
-        .login-wrapper { min-height: 60vh; display: flex; justify-content: center; align-items: center; padding: 20px; }
-        form#form1 { display: flex; align-items: flex-start; justify-content: center; padding: 60px 20px 0px 20px; box-sizing: border-box; }
-        .login-box { background: #fff; padding: 28px 32px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 100%; max-width: 400px; color: #333; }
-        .login-box h2 { text-align: center; margin-bottom: 20px; color: #333; }
-        .input-group { margin-bottom: 20px; }
-        .input-group label { font-weight: bold; display: block; text-align: left; }
-        .form-control { width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 2px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; text-align: left; }
-        .form-control::placeholder { text-align: left; }
-        .field-validator { display: block; min-height: 18px; margin-top: 6px; color: red; }
-        .btn-submit { width: 100%; padding: 12px; background-color: #222; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; margin-top: 10px; }
-        .btn-submit:hover { background-color: #555; }
-        .link-text { text-align: center; display: block; margin-top: 10px; color: #111; text-decoration: none; font-size: 0.95rem; }
-        .link-text a { color: #0066cc; text-decoration: none; font-weight: 600; }
-        .link-text a:hover { text-decoration: underline; }
-    </style>
 </head>         
+
 <body>
     <header>
         <div class="header-container">

@@ -106,6 +106,7 @@
     <Content Include="Content\css\body.css" />
     <Content Include="Content\css\header.css" />
     <Content Include="Content\css\footer.css" />
+    <Content Include="Content\css\login.css" />
     <Content Include="Content\images\Logo.png" />
     <Content Include="Content\images\Mini_Logo.png" />
     <Content Include="Home.aspx" />

@@ -1,0 +1,124 @@
+.login-wrapper {
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+form#form1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 60px 20px 0px 20px;
+    box-sizing: border-box;
+}
+
+.login-box {
+    background: #fff;
+    padding: 28px 32px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 500px;
+}
+
+
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: solid;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-weight: bold;
+    display: block;
+    text-align: left;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 2px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.form-control::placeholder {
+    text-align: left;
+}
+
+.field-validator {
+    display: block;
+    min-height: 18px;
+    margin-top: 6px;
+    color: red;
+}
+
+.btn-submit {
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    background-color: #f4e7c4;
+    color: #76442d;
+    font-weight: bold;
+    margin-top: 10px;
+    border: 2px solid #916957;
+}
+
+.btn-submit:hover {
+    transition: background-color 0.3s ease-in-out;
+    background-color: #f4e7c4bf;
+}
+
+.link-text {
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    color: #111;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.link-text a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.link-text a:hover {
+    text-decoration: underline;
+}
+
+/* Registeration CSS */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    column-gap: 50px;
+}
+
+.registration-box {
+    background: #fff;
+    padding: 28px 32px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 670px;
+}
+
+.registration-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: solid;
+}

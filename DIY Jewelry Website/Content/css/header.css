@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-h1, h2, h3 {
+h1, h2, h3, label {
     color: #76442d;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
