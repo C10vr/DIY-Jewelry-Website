@@ -22,8 +22,9 @@ header {
 }
 
 header.sticky {
-    position: sticky;
+    position: fixed;
     top: 0;
+    width: 100%;
 }
 
 .header-container {
@@ -32,6 +33,12 @@ header.sticky {
 
 .header-quote {
     padding: 100px;
+}
+
+.header-quote.hidden-quote {
+    max-height: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
 }
 
 .logo-box {
