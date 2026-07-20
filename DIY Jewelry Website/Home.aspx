@@ -17,11 +17,26 @@
 
     <!-- Script -->
     <script src="https://kit.fontawesome.com/cf1d4ca410.js" crossorigin="anonymous"></script>
+    <script>
+
+        window.onscroll = function () {
+
+            let header = document.getElementById("header");
+
+            if (document.body.scrollTop > 450 || document.documentElement.scrollTop > 450) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+
+        };
+
+    </script>
 
 </head>
 
 <body>
-    <header>
+    <header id="header">
 
         <div class="header-container">
             <div class="logo-box">
@@ -146,12 +161,11 @@
         </div>
     </div>
 
-    <script src="script.js"></script> <!-- Link to JavaScript -->
-
     <footer>
-        <p><h6>&copy; 2025 Knot Fine Co. Company & Co. All rights reserved.</h6></p>
+        <p><h6>&copy; 2026 Knot Fine Co. Company & Co. All rights reserved.</h6></p>
     </footer>
 </body>
 </html>
+
 
 
