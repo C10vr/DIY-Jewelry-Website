@@ -1455,6 +1455,7 @@
     </Compile>
     <Compile Include="Welcome.aspx.designer.cs">
       <DependentUpon>Welcome.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Tutorial.aspx.cs">
       <DependentUpon>Tutorial.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
