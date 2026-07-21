@@ -33,7 +33,7 @@
         <div id="content">
             <div class="welcome-container">
                 <div class="welcome-message">
-                    <h2>Welcome, Dumbfuck</h2>
+                    <h2>Welcome, <asp:Label ID="lblWelcome" runat="server" Text="User"></asp:Label></h2>
                 </div>
             </div>
         </div>
