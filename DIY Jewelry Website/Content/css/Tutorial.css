@@ -1,0 +1,64 @@
+﻿.tutorial-title {
+    text-align: center;
+    padding: 50px;
+}
+
+    .tutorial-title h1 {
+        font-size: 40px;
+        color: #6b4f3a;
+    }
+
+    .tutorial-title p {
+        font-size: 18px;
+        color: #666;
+    }
+
+.tutorial {
+    width: 85%;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+.tutorial-card {
+    display: flex;
+    gap: 30px;
+    background: white;
+    padding: 25px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 12px rgba(0,0,0,.15);
+}
+
+    .tutorial-card img {
+        width: 300px;
+        border-radius: 10px;
+    }
+
+.tutorial-text {
+    flex: 1;
+}
+
+    .tutorial-text h2 {
+        color: #8b5e3c;
+        margin-bottom: 10px;
+    }
+
+    .tutorial-text h3 {
+        margin-top: 20px;
+    }
+
+    .tutorial-text ol li,
+    .tutorial-text ul li {
+        margin: 8px 0;
+    }
+
+@media(max-width:768px) {
+
+    .tutorial-card {
+        flex-direction: column;
+    }
+
+        .tutorial-card img {
+            width: 100%;
+        }
+}

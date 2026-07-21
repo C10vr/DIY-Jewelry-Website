@@ -24,26 +24,35 @@ namespace DIY_Jewelry_Website
                 {
                     con.Open();
 
-                    string query = "SELECT COUNT(*) FROM userTable WHERE Username = @Username AND Password = @Password";
+                    string query = "SELECT UserType FROM userTable WHERE Username = @Username AND Password = @Password";
 
                     SqlCommand cmd = new SqlCommand(query, con);
 
                     cmd.Parameters.AddWithValue("@Username", txtUsername.Text.Trim());
                     cmd.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
 
-                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    object result = cmd.ExecuteScalar();
 
-                    if (count > 0)
+                    if(result != null)
                     {
-                        Session["Username"] = txtUsername.Text.Trim();
+                        int userType = Convert.ToInt32(result);
 
-                        if (txtUsername.Text.Trim().Equals("Admin", StringComparison.OrdinalIgnoreCase))
+                        Session["Username"] = txtUsername.Text.Trim();
+                        Session["UserType"] = userType;
+
+                        if (userType == 2)
                         {
                             Response.Redirect("Welcome.aspx");
                         }
+                        else if (userType == 1)
+                        {
+                            //Normal Member
+                            Response.Redirect("Home.aspx");
+                        }
                         else
                         {
-                            Response.Redirect("Home.aspx");
+                            lblMessage.ForeColor = System.Drawing.Color.Red;
+                            lblMessage.Text = "Invalid User Type";
                         }
                     }
                     else
@@ -58,6 +67,7 @@ namespace DIY_Jewelry_Website
                 lblMessage.ForeColor = System.Drawing.Color.Red;
                 lblMessage.Text = "Error: " + ex.Message;
             }
+
         }
     }
 }
