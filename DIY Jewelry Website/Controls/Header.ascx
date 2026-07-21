@@ -35,7 +35,7 @@
 </header>
 
 <script>
-    // Simple header-only sticky helper. Include this control on pages where header is needed.
+
     document.addEventListener('DOMContentLoaded', function () {
         const header = document.getElementById('site-header');
         if (!header) return;
