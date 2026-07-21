@@ -39,7 +39,7 @@ namespace DIY_Jewelry_Website
 
                         if (txtUsername.Text.Trim().Equals("Admin", StringComparison.OrdinalIgnoreCase))
                         {
-                            Response.Redirect("");
+                            Response.Redirect("Welcome.aspx");
                         }
                         else
                         {
