@@ -22,7 +22,7 @@
 
     <%@ Register Src="~/Controls/Header.ascx" TagPrefix="uc" TagName="Header" %>
 
-    <uc:Header runat="server" id="SiteHeader" />
+    <uc:Header runat="server" ID="SiteHeader" />
 
     <%-- End of Header --%>
 

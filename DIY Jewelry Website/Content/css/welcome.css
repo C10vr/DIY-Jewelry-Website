@@ -1,0 +1,14 @@
+﻿.welcome-container {
+    min-height: calc(100vh - 149px);
+    height: auto;
+    background-color: #f4e7c4;
+    border-top: 6.7px solid #916957;
+}
+
+.welcome-message {
+    padding: 15vw 10vw;
+}
+
+.welcome-message h2 {
+    font-size: 35px;
+}
