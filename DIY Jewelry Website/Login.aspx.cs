@@ -39,11 +39,11 @@ namespace DIY_Jewelry_Website
 
                         if (txtUsername.Text.Trim().Equals("Admin", StringComparison.OrdinalIgnoreCase))
                         {
-                            Response.Redirect("");
+                            Response.Redirect("AdminDashboard.aspx");
                         }
                         else
                         {
-                            Response.Redirect("Home.aspx");
+                            Response.Redirect("UserDashboard.aspx");
                         }
                     }
                     else
