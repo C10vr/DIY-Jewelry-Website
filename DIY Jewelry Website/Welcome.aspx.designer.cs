@@ -8,10 +8,10 @@
 //------------------------------------------------------------------------------
 
 namespace DIY_Jewelry_Website
-{
 
 
     public partial class Welcome
     {
     }
+
 }

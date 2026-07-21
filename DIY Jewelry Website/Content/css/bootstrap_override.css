@@ -1,0 +1,13 @@
+.main-panel-override {
+    width: 100% !important;
+}
+
+.page-body-wrapper {
+    padding-top: 0 !important;
+}
+
+.content-wrapper {
+    background: #fff9ea59 !important;
+    padding: 2.5rem !important;
+    border-top: 2px solid #916957;
+}
