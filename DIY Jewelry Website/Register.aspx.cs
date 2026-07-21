@@ -35,13 +35,14 @@ namespace DIY_Jewelry_Website
                 }
                 else
                 {
-                    string query1 = "INSERT INTO userTable (FullName, EmailAddress, Username, Password) VALUES (@txtFullName, @txtEmail, @txtRegUsername, @txtRegPassword)";
+                    string query1 = "INSERT INTO userTable (FullName, EmailAddress, Username, Password, UserType) VALUES (@txtFullName, @txtEmail, @txtRegUsername, @txtRegPassword, @UserType)";
                     SqlCommand cmd1 = new SqlCommand(query1, con);
 
                     cmd1.Parameters.AddWithValue("@txtFullName", txtFullName.Text);
                     cmd1.Parameters.AddWithValue("@txtEmail", txtEmail.Text);
                     cmd1.Parameters.AddWithValue("@txtRegUsername", txtRegUsername.Text);
                     cmd1.Parameters.AddWithValue("@txtRegPassword", txtRegPassword.Text);
+                    cmd1.Parameters.AddWithValue("@UserType", 1);
 
                     cmd1.ExecuteNonQuery();
                     Response.Redirect("login.aspx");
