@@ -100,4 +100,8 @@ header.sticky {
     width: 135px;
 }
 
+.sectionPadding {
+    padding-top: 25vw;
+}
+
 /* End of Content */

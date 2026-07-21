@@ -1,10 +1,17 @@
 <%@ Control Language="C#" AutoEventWireup="true" %>
-<header id="site-header">
+
+<script runat="server">
+
+    public bool ShowQuote { get; set; } = false;
+
+</script>
+
+<header id="header">
 
     <div class="header-container">
         <div class="logo-box">
             <div>
-                <a href="#">
+                <a href="Home.aspx">
                     <img class="logo" src="/Content/images/Logo.png" />
                 </a>
             </div>
@@ -23,7 +30,11 @@
 
         </div>
     </div>
+
+    <% if (ShowQuote) { %>
+
     <div class="header-quote">
+
         <div>
             <h1><b>Knot Fine Co.</b></h1>
             <p class="slogan">The Money That Grows.</p>
@@ -31,32 +42,38 @@
         <div class="why-us-button">
             <a href="#features" onclick="scrollToInfo()" class="cta-button">Why Us?</a>
         </div>
+
     </div>
+    <% } %>
 </header>
 
 <script>
 
-    document.addEventListener('DOMContentLoaded', function () {
-        const header = document.getElementById('site-header');
-        if (!header) return;
-        const headerQuote = document.querySelector('.header-quote');
-        const sectionPadding = document.getElementById('products');
+    (function () {
 
-        function update() {
-            const y = window.scrollY || document.documentElement.scrollTop;
-            if (y > 400) {
-                header.classList.add('sticky');
+        const header = document.getElementById('header');
+        const headerQuote = document.querySelector('.header-quote');
+        let sectionPadding = document.querySelector('#content, #section');
+
+        window.onscroll = function () {
+            if (!sectionPadding) sectionPadding = document.querySelector('#content, #section');
+            if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+
+                if (header) header.classList.add("sticky");
                 if (headerQuote) headerQuote.classList.add('hidden-quote');
                 if (sectionPadding) sectionPadding.classList.add('sectionPadding');
+
             } else {
-                header.classList.remove('sticky');
+
+                if (header) header.classList.remove("sticky");
                 if (headerQuote) headerQuote.classList.remove('hidden-quote');
                 if (sectionPadding) sectionPadding.classList.remove('sectionPadding');
-            }
-        }
 
-        window.addEventListener('scroll', update, { passive: true });
-        // initialize
-        update();
-    });
+            }
+        };
+
+        window.onscroll();
+
+    })();
+
 </script>
