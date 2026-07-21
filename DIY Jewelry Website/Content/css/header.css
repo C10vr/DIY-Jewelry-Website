@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-h1, h2, h3 {
+h1, h2, h3, label {
     color: #76442d;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -22,8 +22,9 @@ header {
 }
 
 header.sticky {
-    position: sticky;
+    position: fixed;
     top: 0;
+    width: 100%;
 }
 
 .header-container {
@@ -33,6 +34,12 @@ header.sticky {
 .header-quote {
     padding: 100px;
     transition: opacity 0.25s ease, visibility 0.25s ease, max-height 0.25s ease, padding 0.25s ease;
+}
+
+.header-quote.hidden-quote {
+    max-height: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
 }
 
 .header-quote.hidden-quote {
@@ -62,7 +69,7 @@ header.sticky {
 }
 
 .top-bar h2 {
-    font-size: 3vh;
+    font-size: 2.5vh;
     font-weight: 300;
     transition: transform 0.2s ease;
 }
