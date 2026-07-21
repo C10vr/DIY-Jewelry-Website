@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace DIY_Jewelry_Website
 {
-    public partial class _Default : Page
+    public partial class Welcome : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

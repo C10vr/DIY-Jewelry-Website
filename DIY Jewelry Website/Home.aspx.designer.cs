@@ -11,7 +11,7 @@ namespace DIY_Jewelry_Website
 {
 
 
-    public partial class _Default
+    public partial class Home
     {
     }
 }

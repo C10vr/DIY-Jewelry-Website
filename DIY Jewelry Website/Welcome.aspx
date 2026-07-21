@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Welcome.aspx.cs" Inherits="DIY_Jewelry_Website.Welcome" %>
+<!DOCTYPE html>
 <html lang="en">
 
     <head runat="server">
