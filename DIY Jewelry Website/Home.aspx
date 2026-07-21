@@ -17,16 +17,21 @@
 
     <!-- Script -->
     <script src="https://kit.fontawesome.com/cf1d4ca410.js" crossorigin="anonymous"></script>
-    <script>
 
         window.onscroll = function () {
 
             let header = document.getElementById("header");
+            let headerQuote = document.querySelector('.header-quote');
+            let sectionPadding = document.getElementById('products');
 
-            if (document.body.scrollTop > 450 || document.documentElement.scrollTop > 450) {
+            if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
                 header.classList.add("sticky");
+                if (headerQuote) headerQuote.classList.add('hidden-quote');
+                if (sectionPadding) sectionPadding.classList.add('sectionPadding');
             } else {
                 header.classList.remove("sticky");
+                if (headerQuote) headerQuote.classList.remove('hidden-quote');
+                if (sectionPadding) sectionPadding.classList.remove('sectionPadding');
             }
 
         };
@@ -36,7 +41,8 @@
 </head>
 
 <body>
-    <header id="header">
+    <%-- Header --%>
+    <%@ Register Src="~/Controls/Header.ascx" TagPrefix="uc" TagName="Header" %>
 
         <div class="header-container">
             <div class="logo-box">
@@ -59,14 +65,14 @@
                 </div>
 
             </div>
-            <div class="header-quote">
-                <div>
-                    <h1><b>Knot Fine Co.</b></h1>
-                    <p class="slogan">The Money That Grows.</p>
-                </div>
-                <div class="why-us-button">
-                    <a href="#features" onclick="scrollToInfo()" class="cta-button">Why Us?</a>
-                </div>
+        </div>
+        <div class="header-quote">
+            <div>
+                <h1><b>Knot Fine Co.</b></h1>
+                <p class="slogan">The Money That Grows.</p>
+            </div>
+            <div class="why-us-button">
+                <a href="#features" onclick="scrollToInfo()" class="cta-button">Why Us?</a>
             </div>
         </div>
     </header>

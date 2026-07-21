@@ -104,6 +104,7 @@
     <Content Include="Content\css\footer.css" />
     <Content Include="Content\images\Logo.png" />
     <Content Include="Content\images\Mini_Logo.png" />
+    <Content Include="Controls\Header.ascx" />
     <Content Include="Home.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />

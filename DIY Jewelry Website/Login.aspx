@@ -33,23 +33,8 @@
     </style>
 </head>         
 <body>
-    <header>
-        <div class="header-container">
-            <div class="logo-box">
-                <div>
-                    <a href="Home.aspx"><img class="logo" src="/Content/images/Logo.png" /></a>
-                </div>
-                <div class="top-bar">
-                    <h2>Join Us</h2>
-                    <h2>About Us</h2>
-                    <a href="Login.aspx" style="text-decoration: none; color: inherit;"><h2>Log In</h2></a>
-                </div>
-                <div class="hamburger">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-            </div>
-        </div>
-    </header>
+    <%-- Header --%>
+    <%@ Register Src="~/Controls/Header.ascx" TagPrefix="uc" TagName="Header" %>
 
     <!-- login form -->
     <form id="form1" runat="server">
