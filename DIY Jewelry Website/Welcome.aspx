@@ -32,7 +32,9 @@
 
         <div id="content">
             <div class="welcome-container">
-                <div class="welcome-message">Welcome, Dumbfuck</div>
+                <div class="welcome-message">
+                    <h2>Welcome, Dumbfuck</h2>
+                </div>
             </div>
         </div>
 
