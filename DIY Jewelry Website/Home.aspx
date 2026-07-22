@@ -32,7 +32,6 @@
         <div id="content">
             <section id="products">
                 <h2 class="content">Our Products</h2>
-                <a href="Tutorial.aspx" class="btn">Explore Tutorials</a>
                 <br>
                 <div class="feature_box" href="#eplant">
                     <img src="images/eplant_logo.png" alt="Why Choose Knot Fine Co." class="feature-img">

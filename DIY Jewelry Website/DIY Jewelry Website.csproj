@@ -112,6 +112,10 @@
     </Content>
     <Content Include="Content\css\vertical-layout-light\style.css" />
     <Content Include="Content\css\welcome.css" />
+    <Content Include="Content\images\bracelet.png" />
+    <Content Include="Content\images\earings.png" />
+    <Content Include="Content\images\necklace.png" />
+    <Content Include="Content\images\ring.png" />
     <Content Include="Logout.aspx" />
     <Content Include="Tutorial.aspx" />
     <Content Include="Content\css\body.css" />
