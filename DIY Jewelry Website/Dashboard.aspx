@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ Page Language="C#" AutoEventWireup="true" %>
 <html lang="en">
 
     <head runat="server">
@@ -228,23 +229,67 @@
                             <!-- SqlDataSource filtered to UserType = 1 -->
                             <asp:SqlDataSource ID="SqlDataSourceUsers" runat="server"
                                 ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
-                                SelectCommand="SELECT Id, FullName, EmailAddress, Username, UserType FROM userTable WHERE UserType = @UserType ORDER BY Username DESC">
+                                SelectCommand="SELECT Id, FullName, EmailAddress, Username, UserType FROM userTable WHERE UserType = @UserType ORDER BY Username DESC"
+                                DeleteCommand="DELETE FROM userTable WHERE Id = @Id">
                                 <SelectParameters>
                                     <asp:Parameter Name="UserType" Type="Int32" DefaultValue="1" />
                                 </SelectParameters>
+                                <DeleteParameters>
+                                    <asp:Parameter Name="Id" Type="Int32" />
+                                </DeleteParameters>
                             </asp:SqlDataSource>
 
-                            <asp:GridView ID="GridViewUsers" runat="server" DataSourceID="SqlDataSourceUsers" AutoGenerateColumns="false" CssClass="table table-bordered">
+                            <asp:GridView ID="GridViewUsers" runat="server" DataSourceID="SqlDataSourceUsers" AutoGenerateColumns="false" CssClass="table table-bordered" DataKeyNames="Id">
                                 <Columns>
-                                    <asp:BoundField DataField="Id" HeaderText="ID" />
+                                    <asp:BoundField DataField="Id" HeaderText="ID" ReadOnly="true" />
                                     <asp:BoundField DataField="FullName" HeaderText="Full Name" />
                                     <asp:BoundField DataField="EmailAddress" HeaderText="Email" />
                                     <asp:BoundField DataField="Username" HeaderText="Username" />
                                     <asp:BoundField DataField="UserType" HeaderText="User Type" />
+
+                                    <%-- Edit opens modal to edit user inline --%>
+                                    <asp:TemplateField HeaderText="Edit">
+                                        <ItemTemplate>
+                                            <asp:Button ID="btnOpenEdit" runat="server" Text="Edit" CssClass="btn btn-sm btn-primary" OnClientClick="openEditModal(this); return false;" />
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+
+                                    <%-- Delete button uses SqlDataSource DeleteCommand and the DataKey (Id) --%>
+                                    <asp:ButtonField ButtonType="Button" CommandName="Delete" Text="Delete" HeaderText="Delete" />
                                 </Columns>
                             </asp:GridView>
                         </div>
                     </div>
+                    </div>
+                </div>
+                <!-- Edit Modal -->
+                <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="editModalLabel">Edit User</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <asp:HiddenField ID="hfEditId" runat="server" />
+                                <div class="mb-3">
+                                    <label class="form-label">Full Name</label>
+                                    <asp:TextBox ID="txtEditFullName" runat="server" CssClass="form-control"></asp:TextBox>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Email</label>
+                                    <asp:TextBox ID="txtEditEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Username</label>
+                                    <asp:TextBox ID="txtEditUsername" runat="server" CssClass="form-control"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <asp:Button ID="btnSaveEdit" runat="server" Text="Save" CssClass="btn btn-primary" OnClick="btnSaveEdit_Click" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -295,6 +340,80 @@
                     // fail silently
                 }
             });
+
+            // Open edit modal and populate fields from the clicked row
+            function openEditModal(btn) {
+                try {
+                    var tr = btn.closest('tr');
+                    if (!tr) return;
+                    var cells = tr.querySelectorAll('td');
+                    if (!cells || cells.length < 4) return;
+
+                    // Cells order: ID, FullName, EmailAddress, Username, UserType, Edit, Delete
+                    var id = cells[0].innerText.trim();
+                    var fullName = cells[1].innerText.trim();
+                    var email = cells[2].innerText.trim();
+                    var username = cells[3].innerText.trim();
+
+                    // Set values to server controls by ClientID
+                    var hf = document.getElementById('<%= hfEditId.ClientID %>');
+                    if (hf) hf.value = id;
+                    var txtFull = document.getElementById('<%= txtEditFullName.ClientID %>');
+                    if (txtFull) txtFull.value = fullName;
+                    var txtEmail = document.getElementById('<%= txtEditEmail.ClientID %>');
+                    if (txtEmail) txtEmail.value = email;
+                    var txtUser = document.getElementById('<%= txtEditUsername.ClientID %>');
+                    if (txtUser) txtUser.value = username;
+
+                    // Show bootstrap modal (Bootstrap 5)
+                    var modalEl = document.getElementById('editModal');
+                    if (modalEl && typeof bootstrap !== 'undefined') {
+                        var bsModal = bootstrap.Modal.getOrCreateInstance(modalEl);
+                        bsModal.show();
+                    }
+                } catch (e) {
+                    // fail silently
+                }
+            }
+        </script>
+        <script runat="server">
+            protected void btnSaveEdit_Click(object sender, EventArgs e)
+            {
+                try
+                {
+                    int id = 0;
+                    if (!int.TryParse(hfEditId.Value, out id)) return;
+
+                    string full = txtEditFullName.Text.Trim();
+                    string email = txtEditEmail.Text.Trim();
+                    string username = txtEditUsername.Text.Trim();
+
+                    string cs = System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+                    using (System.Data.SqlClient.SqlConnection con = new System.Data.SqlClient.SqlConnection(cs))
+                    {
+                        con.Open();
+                        string sql = "UPDATE userTable SET FullName=@FullName, EmailAddress=@Email, Username=@Username WHERE Id=@Id";
+                        using (System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand(sql, con))
+                        {
+                            cmd.Parameters.AddWithValue("@FullName", full);
+                            cmd.Parameters.AddWithValue("@Email", email);
+                            cmd.Parameters.AddWithValue("@Username", username);
+                            cmd.Parameters.AddWithValue("@Id", id);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+
+                    // Refresh grid
+                    GridViewUsers.DataBind();
+
+                    // Close modal via script
+                    System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "closeModal", "var m = bootstrap.Modal.getInstance(document.getElementById('editModal')); if(m) m.hide();", true);
+                }
+                catch (Exception)
+                {
+                    // swallow or log
+                }
+            }
         </script>
         <script src="/Content/js/settings.js"></script>
         <script src="/Content/js/todolist.js"></script>
