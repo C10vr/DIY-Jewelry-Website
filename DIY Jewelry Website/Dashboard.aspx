@@ -218,9 +218,9 @@
                 <div class="col-lg-12 grid-margin stretch-card">
                     <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Bordered table</h4>
+                        <h4 class="card-title">Welcome Back, Admin</h4>
                         <p class="card-description">
-                        Add class <code>.table-bordered</code>
+                        List of Users <code> Descending Order</code>
                         </p>
                         <div class="table-responsive pt-3 table-scroll-container">
                         <table class="table table-bordered">
@@ -262,6 +262,9 @@
                                 <td>
                                 May 15, 2015
                                 </td>
+                                <td>
+                                <button type="button" class="btn btn-danger btn-sm delete-row">Delete</button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>
@@ -280,6 +283,9 @@
                                 </td>
                                 <td>
                                 July 1, 2015
+                                </td>
+                                <td>
+                                <button type="button" class="btn btn-danger btn-sm delete-row">Delete</button>
                                 </td>
                             </tr>
                             <tr>
@@ -300,6 +306,9 @@
                                 <td>
                                 Apr 12, 2015
                                 </td>
+                                <td>
+                                <button type="button" class="btn btn-danger btn-sm delete-row">Delete</button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>
@@ -318,6 +327,9 @@
                                 </td>
                                 <td>
                                 May 15, 2015
+                                </td>
+                                <td>
+                                <button type="button" class="btn btn-danger btn-sm delete-row">Delete</button>
                                 </td>
                             </tr>
                             <tr>
@@ -338,6 +350,9 @@
                                 <td>
                                 May 03, 2015
                                 </td>
+                                <td>
+                                <button type="button" class="btn btn-danger btn-sm delete-row">Delete</button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>
@@ -357,6 +372,9 @@
                                 <td>
                                 April 05, 2015
                                 </td>
+                                <td>
+                                <button type="button" class="btn btn-danger btn-sm delete-row">Delete</button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>
@@ -375,6 +393,9 @@
                                 </td>
                                 <td>
                                 June 16, 2015
+                                </td>
+                                <td>
+                                <button type="button" class="btn btn-danger btn-sm delete-row">Delete</button>
                                 </td>
                             </tr>
                             </tbody>
@@ -428,6 +449,30 @@
                 } catch (e) {
                     // fail silently
                 }
+            });
+        </script>
+        <script>
+            // Delete row handler for the users table
+            document.addEventListener('DOMContentLoaded', function () {
+                var containers = document.querySelectorAll('.table-scroll-container');
+                containers.forEach(function (container) {
+                    container.addEventListener('click', function (e) {
+                        var target = e.target || e.srcElement;
+                        if (target && target.classList && target.classList.contains('delete-row')) {
+                            if (!confirm('Delete this row?')) return;
+                            var tr = target.closest('tr');
+                            if (!tr) return;
+                            var tbody = tr.parentNode;
+                            tbody.removeChild(tr);
+                            // re-number first column cells
+                            var rows = tbody.querySelectorAll('tr');
+                            rows.forEach(function (r, i) {
+                                var firstTd = r.querySelector('td');
+                                if (firstTd) firstTd.textContent = (i + 1);
+                            });
+                        }
+                    });
+                });
             });
         </script>
         <script src="/Content/js/settings.js"></script>
