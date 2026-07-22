@@ -43,12 +43,12 @@ namespace DIY_Jewelry_Website
                         if (userType == 2)
                         {
                             //Admin
-                            Response.Redirect("");
+                            Response.Redirect("Dashboard.aspx");
                         }
                         else if (userType == 1)
                         {
                             //Normal Member
-                            Response.Redirect("Home.aspx");
+                            Response.Redirect("Welcome.aspx");
                         }
                         else
                         {
