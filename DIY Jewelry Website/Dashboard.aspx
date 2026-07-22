@@ -30,6 +30,16 @@
 
         <%-- Scripts --%>
         <script src="https://kit.fontawesome.com/cf1d4ca410.js" crossorigin="anonymous"></script>
+        <style>
+            /* Make bordered table scroll when more than 7 rows */
+            .table-scroll-container {
+                /* overflow-y will be set dynamically when needed */
+                overflow-y: visible;
+            }
+            .table-scroll-container table {
+                margin-bottom: 0; /* avoid extra gap inside scroll area */
+            }
+        </style>
 
     </head>
 
@@ -212,7 +222,7 @@
                         <p class="card-description">
                         Add class <code>.table-bordered</code>
                         </p>
-                        <div class="table-responsive pt-3">
+                        <div class="table-responsive pt-3 table-scroll-container">
                         <table class="table table-bordered">
                             <thead>
                             <tr>
@@ -397,6 +407,29 @@
         <script src="/Content/js/off-canvas.js"></script>
         <script src="/Content/js/hoverable-collapse.js"></script>
         <script src="/Content/js/template.js"></script>
+        <script>
+            // Enable vertical scrolling for the bordered table when rows > 7
+            document.addEventListener('DOMContentLoaded', function () {
+                try {
+                    var container = document.querySelector('.table-scroll-container');
+                    if (!container) return;
+                    var tbody = container.querySelector('tbody');
+                    if (!tbody) return;
+                    var rows = tbody.querySelectorAll('tr');
+                    if (rows.length > 7) {
+                        // measure a single row height and header height
+                        var rowHeight = rows[0].offsetHeight || 48;
+                        var thead = container.querySelector('thead');
+                        var theadHeight = thead ? thead.offsetHeight : 56;
+                        // set max-height to show 7 rows + the header
+                        container.style.maxHeight = (rowHeight * 7 + theadHeight) + 'px';
+                        container.style.overflowY = 'auto';
+                    }
+                } catch (e) {
+                    // fail silently
+                }
+            });
+        </script>
         <script src="/Content/js/settings.js"></script>
         <script src="/Content/js/todolist.js"></script>
         <!-- endinject -->
