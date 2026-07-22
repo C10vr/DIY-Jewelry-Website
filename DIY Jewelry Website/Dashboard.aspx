@@ -40,6 +40,14 @@
             .table-scroll-container table {
                 margin-bottom: 0; /* avoid extra gap inside scroll area */
             }
+            /* Small fixed-width action buttons in grid */
+            .grid-action-btn {
+                padding: .15rem .35rem;
+                font-size: .78rem;
+                width: 48px;
+                min-width: 48px;
+                text-align: center;
+            }
         </style>
 
     </head>
@@ -250,12 +258,16 @@
                                     <%-- Edit opens modal to edit user inline --%>
                                     <asp:TemplateField HeaderText="Edit">
                                         <ItemTemplate>
-                                            <asp:Button ID="btnOpenEdit" runat="server" Text="Edit" CssClass="btn btn-sm btn-primary" OnClientClick="openEditModal(this); return false;" />
+                                            <asp:Button ID="btnOpenEdit" runat="server" Text="Edit" CssClass="btn btn-sm btn-primary grid-action-btn" OnClientClick="openEditModal(this); return false;" />
                                         </ItemTemplate>
                                     </asp:TemplateField>
 
                                     <%-- Delete button uses SqlDataSource DeleteCommand and the DataKey (Id) --%>
-                                    <asp:ButtonField ButtonType="Button" CommandName="Delete" Text="Delete" HeaderText="Delete" />
+                                    <asp:TemplateField HeaderText="Delete">
+                                        <ItemTemplate>
+                                            <asp:Button ID="btnDelete" runat="server" CommandName="Delete" Text="Delete" CssClass="btn btn-sm btn-danger grid-action-btn" OnClientClick="return confirm('Are you sure you want to delete this user?');" />
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
                                 </Columns>
                             </asp:GridView>
                         </div>
