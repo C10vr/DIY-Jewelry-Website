@@ -112,7 +112,6 @@
     </Content>
     <Content Include="Content\css\vertical-layout-light\style.css" />
     <Content Include="Content\css\welcome.css" />
-    <Content Include="Database\DIYJewelryDB.sql" />
     <Content Include="Tutorial.aspx" />
     <Content Include="Content\css\body.css" />
     <Content Include="Content\css\Tutorial.css" />
@@ -1512,7 +1511,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\App_LocalResources\" />
-    <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
