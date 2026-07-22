@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Web.Security;
 
 namespace DIY_Jewelry_Website
 {
@@ -40,13 +41,28 @@ namespace DIY_Jewelry_Website
                         Session["Username"] = txtUsername.Text.Trim();
                         Session["UserType"] = userType;
 
+                        // Create forms auth ticket so the whole site knows the user and role
+                        var ticket = new FormsAuthenticationTicket(1,
+                            txtUsername.Text.Trim(),
+                            DateTime.Now,
+                            DateTime.Now.AddHours(8),
+                            false,
+                            userType.ToString()); // store userType in UserData
+
+                        string encrypted = FormsAuthentication.Encrypt(ticket);
+                        var cookie = new HttpCookie(FormsAuthentication.FormsCookieName, encrypted)
+                        {
+                            HttpOnly = true
+                        };
+                        Response.Cookies.Add(cookie);
+
                         if (userType == 2)
                         {
                             Response.Redirect("Welcome.aspx");
                         }
                         else if (userType == 1)
                         {
-                            //Normal Member
+                            // Normal Member
                             Response.Redirect("Home.aspx");
                         }
                         else
