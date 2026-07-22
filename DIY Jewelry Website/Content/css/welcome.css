@@ -11,9 +11,9 @@
 
 .welcome-message h2 {
     font-size: 35px;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 #lblWelcome {
-    font-weight: bold;
+    font-weight: normal;
 }
