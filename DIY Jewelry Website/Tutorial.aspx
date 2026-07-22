@@ -42,7 +42,7 @@
             <!-- Bracelet -->
             <div class="tutorial-card">
 
-                <img src="Content/images/bracelet.jpg" alt="Bracelet" />
+                <img src="/Content/images/bracelet.png" alt="Bracelet" />
 
                 <div class="card-body">
 
@@ -52,8 +52,8 @@
                         Learn how to make a beautiful beaded bracelet using simple materials.
                     </p>
 
-                    <a href="Bracelet.aspx" class="btn">
-                        Start Tutorial
+                    <a href="https://www.youtube.com/watch?t=147&v=2Sws1xKG9Yw" target="_blank" class="btn">
+                        Watch Tutorial
                     </a>
 
                 </div>
@@ -63,7 +63,7 @@
             <!-- Necklace -->
             <div class="tutorial-card">
 
-                <img src="Content/images/necklace.jpg" alt="Necklace" />
+                <img src="/Content/images/necklace.png" alt="Necklace" />
 
                 <div class="card-body">
 
@@ -73,8 +73,8 @@
                         Design your own stylish necklace with easy step-by-step instructions.
                     </p>
 
-                    <a href="Necklace.aspx" class="btn">
-                        Start Tutorial
+                    <a href="https://www.youtube.com/watch?t=233&v=2Sws1xKG9Yw" target="_blank" class="btn">
+                        Watch Tutorial
                     </a>
 
                 </div>
@@ -84,7 +84,7 @@
             <!-- Earrings -->
             <div class="tutorial-card">
 
-                <img src="Content/images/earrings.jpg" alt="Earrings" />
+                <img src="/Content/images/earings.png" alt="Earrings" />
 
                 <div class="card-body">
 
@@ -94,8 +94,8 @@
                         Create elegant handmade earrings suitable for beginners.
                     </p>
 
-                    <a href="Earrings.aspx" class="btn">
-                        Start Tutorial
+                    <a href="https://www.youtube.com/watch?t=133&v=2Sws1xKG9Yw"  target="_blank" class="btn">
+                        Watch Tutorial
                     </a>
 
                 </div>
@@ -105,7 +105,7 @@
             <!-- Ring -->
             <div class="tutorial-card">
 
-                <img src="Content/images/ring.jpg" alt="Ring" />
+                <img src="/Content/images/ring.png" alt="Ring" />
 
                 <div class="card-body">
 
@@ -115,8 +115,8 @@
                         Make your own beautiful ring with simple crafting techniques.
                     </p>
 
-                    <a href="Ring.aspx" class="btn">
-                        Start Tutorial
+                    <a href="https://youtube.com/shorts/VMsVSlaWQ5k?si=YJEBt5h-dUr8ouuR" target="_blank" class="btn">
+                        Watch Tutorial
                     </a>
 
                 </div>
