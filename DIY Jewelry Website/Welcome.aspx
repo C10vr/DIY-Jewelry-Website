@@ -34,6 +34,7 @@
             <div class="welcome-container">
                 <div class="welcome-message">
                     <h2>Welcome, <asp:Label ID="lblWelcome" runat="server" Text="User"></asp:Label></h2>
+                    <div class="welcome-btn">Go to Dashboard</div>
                 </div>
             </div>
         </div>

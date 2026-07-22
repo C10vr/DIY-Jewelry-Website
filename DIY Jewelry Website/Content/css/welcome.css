@@ -17,3 +17,19 @@
 #lblWelcome {
     font-weight: normal;
 }
+
+.welcome-btn {
+    background: #7c4936c7;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    max-width: max-content;
+}
+
+.welcome-btn:hover {
+    background: #76442d;
+}

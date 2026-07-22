@@ -19,6 +19,27 @@ namespace DIY_Jewelry_Website
             Response.Cache.SetRevalidation(HttpCacheRevalidation.AllCaches);
             Response.Cache.SetValidUntilExpires(false);
 
+            // Set welcome label based on session info
+
+            if (!IsPostBack)
+            {
+                string username = Session["Username"] as string;
+                object userType = Session["UserType"];
+
+                if (userType != null && userType.ToString() == "2")
+                {
+                    lblWelcome.Text = "Admin";
+                }
+                else if (!string.IsNullOrEmpty(username))
+                {
+                    lblWelcome.Text = username;
+                }
+                else
+                {
+                    lblWelcome.Text = "User";
+                }
+            }
+
         }
     }
 }
