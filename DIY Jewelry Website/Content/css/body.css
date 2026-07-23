@@ -8,6 +8,22 @@
     width: 50%;
 }
 
+#content {
+    min-height: calc(100vh - 149px);
+    height: auto;
+}
+
+.content-paragraph {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 50%;
+}
+
+.subtitle {
+    margin-bottom: 15px;
+}
+
 section {
     padding: 40px;
 }

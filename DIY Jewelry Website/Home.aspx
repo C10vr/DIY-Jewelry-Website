@@ -32,7 +32,6 @@
         <div id="content">
             <section id="products">
                 <h2 class="content">Our Products</h2>
-                <a href="Tutorial.aspx" class="btn">Explore Tutorials</a>
                 <br>
                 <div class="feature_box" href="#eplant">
                     <img src="images/eplant_logo.png" alt="Why Choose Knot Fine Co." class="feature-img">
@@ -84,17 +83,8 @@
 
                 <div class="col-1">
                     <h3>USEFUL LINKS</h3>
-                    <a href="#about">
+                    <a href="About.aspx">
                         <p>About</p>
-                    </a>
-                    <a href="#services">
-                        <p>Services</p>
-                    </a>
-                    <a href="#contact">
-                        <p>Contact</p>
-                    </a>
-                    <a href="#products">
-                        <p>Products</p>
                     </a>
                     <a href="#blog">
                         <p>Blog</p>

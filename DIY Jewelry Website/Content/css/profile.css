@@ -1,0 +1,98 @@
+.profile-section {
+    margin-bottom: 20px;
+}
+
+.profile-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.profile-label {
+    font-weight: bold;
+    color: #333;
+    min-width: 150px;
+}
+
+.profile-value {
+    flex-grow: 1;
+    padding: 0 15px;
+    color: #555;
+}
+
+.edit-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+    .edit-btn:hover {
+        background-color: #0056b3;
+        color: white;
+    }
+
+.form-section {
+    display: none;
+}
+
+    .form-section.show {
+        display: block;
+    }
+
+
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    align-items: stretch; 
+}
+
+.button-group .btn-submit,
+.btn-cancel {
+    height: 42px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+
+}
+
+.button-group .btn-submit {
+    flex: 1;
+    border: 1px solid #8c4042 !important;
+    background-color: #f5e6ca;
+    color: #5c3a21;
+    }
+
+.button-group .btn-submit:hover {
+    background-color: #555;
+    color: white;
+
+}
+
+.btn-cancel {
+    background-color: #dc7274;
+    color: white;
+    padding: 0 20px;
+}
+
+.btn-cancel:hover {
+    background-color: #c85a5d;
+    color: white;
+
+}

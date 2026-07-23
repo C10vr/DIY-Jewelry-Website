@@ -1,5 +1,41 @@
 ﻿.welcome-container {
-    min-height: 80dvh;
+    min-height: calc(100vh - 149px);
+    height: auto;
     background-color: #f4e7c4;
     border-top: 6.7px solid #916957;
+}
+
+.welcome-message {
+    padding: 15vw 10vw;
+}
+
+.welcome-message h2 {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+#lblWelcome {
+    font-weight: normal;
+}
+
+.welcome-btn {
+    background: #7c4936c7;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    max-width: max-content;
+}
+
+.welcome-btn:hover {
+    background: #76442d;
+}
+
+#lnkGoDashboard {
+    text-decoration: none;
+    color: #fff;
 }

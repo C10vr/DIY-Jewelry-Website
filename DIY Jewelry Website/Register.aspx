@@ -20,12 +20,11 @@
 
     <%@ Register Src="~/Controls/Header.ascx" TagPrefix="uc" TagName="Header" %>
 
-    <uc:Header runat="server" id="SiteHeader" />
-
     <%-- End of Header --%>
 
     <div id="section">
         <!-- registration form -->
+        <uc:Header runat="server" id="SiteHeader" />
         <form id="form1" runat="server">
             <div class="login-wrapper">
                 <div class="registration-box">
