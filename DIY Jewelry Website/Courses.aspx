@@ -38,105 +38,108 @@
 
     <uc:Header runat="server" ID="SiteHeaderCourses" ShowQuote="false" />
 
-    <section class="tutorial-section">
+    <div id="content">
+        <section class="tutorial-section">
 
-        <h2 class="content">DIY Jewelry Courses</h2>
+            <h2 class="content">DIY Jewelry Courses</h2>
 
-        <asp:Label ID="lblWatchedCount" runat="server" CssClass="subtitle" />
+            <asp:Label ID="lblWatchedCount" runat="server" CssClass="subtitle" />
 
-        <p class="subtitle">
-            Choose a course below and start creating your own handmade accessories.
-        </p>
+            <p class="subtitle center-p">
+                Choose a course below and start creating your own handmade accessories.
+            </p>
 
-        <div class="card-container">
+            <div class="card-container">
 
-            <!-- Bracelet -->
-            <div class="tutorial-card">
+                <!-- Bracelet -->
+                <div class="tutorial-card">
 
-                <img src="/Content/images/bracelet.png" alt="Bracelet" />
+                    <img src="/Content/images/bracelet.png" alt="Bracelet" />
 
-                <div class="card-body">
+                    <div class="card-body">
 
-                    <h3>DIY Bracelet</h3>
+                        <h3>DIY Bracelet</h3>
 
-                    <p>
-                        Learn how to make a beautiful beaded bracelet using simple materials.
-                    </p>
+                        <p>
+                            Learn how to make a beautiful beaded bracelet using simple materials.
+                        </p>
 
-                    <a href="Watch.aspx?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Ft%3D147%26v%3D2Sws1xKG9Yw&id=bracelet" target="_blank" class="btn">
-                        Watch Course
-                    </a>
+                        <a href="Watch.aspx?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Ft%3D147%26v%3D2Sws1xKG9Yw&id=bracelet" target="_blank" class="btn">
+                            Watch Course
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Necklace -->
+                <div class="tutorial-card">
+
+                    <img src="/Content/images/necklace.png" alt="Necklace" />
+
+                    <div class="card-body">
+
+                        <h3>DIY Necklace</h3>
+
+                        <p>
+                            Design your own stylish necklace with easy step-by-step instructions.
+                        </p>
+
+                        <a href="Watch.aspx?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Ft%3D233%26v%3D2Sws1xKG9Yw&id=necklace" target="_blank" class="btn">
+                            Watch Course
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Earrings -->
+                <div class="tutorial-card">
+
+                    <img src="/Content/images/earings.png" alt="Earrings" />
+
+                    <div class="card-body">
+
+                        <h3>DIY Earrings</h3>
+
+                        <p>
+                            Create elegant handmade earrings suitable for beginners.
+                        </p>
+
+                        <a href="Watch.aspx?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Ft%3D133%26v%3D2Sws1xKG9Yw&id=earrings"  target="_blank" class="btn">
+                            Watch Course
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Ring -->
+                <div class="tutorial-card">
+
+                    <img src="/Content/images/ring.png" alt="Ring" />
+
+                    <div class="card-body">
+
+                        <h3>DIY Ring</h3>
+
+                        <p>
+                            Make your own beautiful ring with simple crafting techniques.
+                        </p>
+
+                        <a href="Watch.aspx?url=https%3A%2F%2Fyoutube.com%2Fshorts%2FVMsVSlaWQ5k%3Fsi%3DYJEBt5h-dUr8ouuR&id=ring" target="_blank" class="btn">
+                            Watch Course
+                        </a>
+
+                    </div>
 
                 </div>
 
             </div>
 
-            <!-- Necklace -->
-            <div class="tutorial-card">
+        </section>
 
-                <img src="/Content/images/necklace.png" alt="Necklace" />
-
-                <div class="card-body">
-
-                    <h3>DIY Necklace</h3>
-
-                    <p>
-                        Design your own stylish necklace with easy step-by-step instructions.
-                    </p>
-
-                    <a href="Watch.aspx?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Ft%3D233%26v%3D2Sws1xKG9Yw&id=necklace" target="_blank" class="btn">
-                        Watch Course
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- Earrings -->
-            <div class="tutorial-card">
-
-                <img src="/Content/images/earings.png" alt="Earrings" />
-
-                <div class="card-body">
-
-                    <h3>DIY Earrings</h3>
-
-                    <p>
-                        Create elegant handmade earrings suitable for beginners.
-                    </p>
-
-                    <a href="Watch.aspx?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Ft%3D133%26v%3D2Sws1xKG9Yw&id=earrings"  target="_blank" class="btn">
-                        Watch Course
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- Ring -->
-            <div class="tutorial-card">
-
-                <img src="/Content/images/ring.png" alt="Ring" />
-
-                <div class="card-body">
-
-                    <h3>DIY Ring</h3>
-
-                    <p>
-                        Make your own beautiful ring with simple crafting techniques.
-                    </p>
-
-                    <a href="Watch.aspx?url=https%3A%2F%2Fyoutube.com%2Fshorts%2FVMsVSlaWQ5k%3Fsi%3DYJEBt5h-dUr8ouuR&id=ring" target="_blank" class="btn">
-                        Watch Course
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
+    </div>
 
     <footer>
 
