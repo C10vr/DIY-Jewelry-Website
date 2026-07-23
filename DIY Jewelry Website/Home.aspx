@@ -60,7 +60,7 @@
                 </div>
             </section>
             <br>
-            <section id="features">
+            <section runat="server" id="courseSection">
                 <h2 class="content">Our Courses</h2>
                 <div class="feature_box">
                     <img src="/Content/images/bracelet.png" alt="Bracelet" class="feature-img">
