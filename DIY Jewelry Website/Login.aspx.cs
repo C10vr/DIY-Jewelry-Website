@@ -62,7 +62,7 @@ namespace DIY_Jewelry_Website
                         }
                         else if (userType == 1)
                         {
-                            Response.Redirect("Welome.aspx");
+                            Response.Redirect("Welcome.aspx");
                         }
                         else
                         {
