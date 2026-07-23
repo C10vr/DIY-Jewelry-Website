@@ -127,7 +127,7 @@
 
         <div>
             <h1><b>Knot Fine Co.</b></h1>
-            <p class="slogan">The Money That Grows.</p>
+            <p class="slogan">You will be fine with our jewelry</p>
         </div>
         <div class="why-us-button">
             <a href="#features" onclick="scrollToInfo()" class="cta-button">Why Us?</a>
