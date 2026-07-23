@@ -11,7 +11,7 @@ namespace DIY_Jewelry_Website
 {
 
 
-    public partial class Tutorial
+    public partial class About
     {
 
         /// <summary>

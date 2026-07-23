@@ -34,7 +34,7 @@
             <div class="welcome-container">
                 <div class="welcome-message">
                     <h2>Welcome, <asp:Label ID="lblWelcome" runat="server" Text="User"></asp:Label></h2>
-                    <asp:HyperLink ID="lnkNavigation" runat="server" CssClass="welcome-btn" Text="Go to tutorial" NavigateUrl="~/tutorial.aspx" />
+                    <asp:HyperLink ID="lnkNavigation" runat="server" CssClass="welcome-btn" Text="Go to courses" NavigateUrl="~/Courses.aspx" />
                 </div>
             </div>
         </div>

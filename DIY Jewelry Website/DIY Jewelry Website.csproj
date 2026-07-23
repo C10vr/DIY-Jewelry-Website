@@ -117,6 +117,7 @@
     <Content Include="Content\images\earings.png" />
     <Content Include="Content\images\necklace.png" />
     <Content Include="Content\images\ring.png" />
+    <Content Include="Courses.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="Profile.aspx" />
     <Content Include="About.aspx" />
@@ -1347,6 +1348,7 @@
     <Content Include="Content\vendors\x-editable\bootstrap-editable.min.js" />
     <Content Include="Controls\Header.ascx" />
     <Content Include="Dashboard.aspx" />
+    <Content Include="Watch.aspx" />
     <Content Include="Welcome.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="favicon.ico" />
@@ -1456,6 +1458,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Content Include="Content\css\bootstrap_override.css" />
+    <Compile Include="Courses.aspx.cs">
+      <DependentUpon>Courses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Courses.aspx.designer.cs">
+      <DependentUpon>Courses.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1469,6 +1478,10 @@
     </Compile>
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Watch.aspx.cs">
+      <DependentUpon>Watch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Welcome.aspx.cs">
       <DependentUpon>Welcome.aspx</DependentUpon>

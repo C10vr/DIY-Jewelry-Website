@@ -46,9 +46,9 @@ namespace DIY_Jewelry_Website
                         lblWelcome.Text = "User";
                     }
 
-                    // For non-admin users show a button that links to the tutorial.
-                    lnkNavigation.Text = "Go to tutorial";
-                    lnkNavigation.NavigateUrl = ResolveUrl("~/tutorial.aspx");
+                    // For non-admin users show a button that links to the courses page.
+                    lnkNavigation.Text = "Go to courses";
+                    lnkNavigation.NavigateUrl = ResolveUrl("~/Courses.aspx");
                     lnkNavigation.Visible = true;
                 }
             }

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Tutorial.aspx.cs" Inherits="DIY_Jewelry_Website.Tutorial" %>
+<%@ Page Language="C#" AutoEventWireup="true" %>
 
 <!DOCTYPE html>
 
@@ -9,7 +9,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>DIY Tutorials - Knot Fine Co.</title>
+    <title>Courses - Knot Fine Co.</title>
 
     <link rel="icon" href="/Content/images/Mini_Logo.png" />
 
@@ -27,14 +27,25 @@
 
     <%@ Register Src="~/Controls/Header.ascx" TagPrefix="uc" TagName="Header" %>
 
-    <uc:Header runat="server" ID="SiteHeader" ShowQuote="false" />
+    <script runat="server">
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            var watched = Session["WatchedCourses"] as System.Collections.Generic.HashSet<string>;
+            int count = watched != null ? watched.Count : 0;
+            if (lblWatchedCount != null) lblWatchedCount.Text = $"Courses watched this session: {count}";
+        }
+    </script>
+
+    <uc:Header runat="server" ID="SiteHeaderCourses" ShowQuote="false" />
 
     <section class="tutorial-section">
 
-        <h2 class="content">DIY Jewelry Tutorials</h2>
+        <h2 class="content">DIY Jewelry Courses</h2>
+
+        <asp:Label ID="lblWatchedCount" runat="server" CssClass="subtitle" />
 
         <p class="subtitle">
-            Choose a jewelry tutorial below and start creating your own handmade accessories.
+            Choose a course below and start creating your own handmade accessories.
         </p>
 
         <div class="card-container">
@@ -52,8 +63,8 @@
                         Learn how to make a beautiful beaded bracelet using simple materials.
                     </p>
 
-                    <a href="https://www.youtube.com/watch?t=147&v=2Sws1xKG9Yw" target="_blank" class="btn">
-                        Watch Tutorial
+                    <a href="Watch.aspx?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Ft%3D147%26v%3D2Sws1xKG9Yw&id=bracelet" target="_blank" class="btn">
+                        Watch Course
                     </a>
 
                 </div>
@@ -73,8 +84,8 @@
                         Design your own stylish necklace with easy step-by-step instructions.
                     </p>
 
-                    <a href="https://www.youtube.com/watch?t=233&v=2Sws1xKG9Yw" target="_blank" class="btn">
-                        Watch Tutorial
+                    <a href="Watch.aspx?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Ft%3D233%26v%3D2Sws1xKG9Yw&id=necklace" target="_blank" class="btn">
+                        Watch Course
                     </a>
 
                 </div>
@@ -94,8 +105,8 @@
                         Create elegant handmade earrings suitable for beginners.
                     </p>
 
-                    <a href="https://www.youtube.com/watch?t=133&v=2Sws1xKG9Yw"  target="_blank" class="btn">
-                        Watch Tutorial
+                    <a href="Watch.aspx?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Ft%3D133%26v%3D2Sws1xKG9Yw&id=earrings"  target="_blank" class="btn">
+                        Watch Course
                     </a>
 
                 </div>
@@ -115,8 +126,8 @@
                         Make your own beautiful ring with simple crafting techniques.
                     </p>
 
-                    <a href="https://youtube.com/shorts/VMsVSlaWQ5k?si=YJEBt5h-dUr8ouuR" target="_blank" class="btn">
-                        Watch Tutorial
+                    <a href="Watch.aspx?url=https%3A%2F%2Fyoutube.com%2Fshorts%2FVMsVSlaWQ5k%3Fsi%3DYJEBt5h-dUr8ouuR&id=ring" target="_blank" class="btn">
+                        Watch Course
                     </a>
 
                 </div>
