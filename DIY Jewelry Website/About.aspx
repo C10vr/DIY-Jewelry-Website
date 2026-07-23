@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="DIY_Jewelry_Website.Tutorial" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="DIY_Jewelry_Website.About" %>
 
 <!DOCTYPE html>
 

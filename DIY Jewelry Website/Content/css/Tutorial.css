@@ -20,12 +20,11 @@
 }
 
 .card-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr));
-    gap: 30px;
-    width: 90%;
-    max-width: 1100px;
+    display: flex;
+    gap: 80px;
+    width: 100%;
     margin: 40px auto;
+    max-width: 90%;
 }
 
 .card-body {
@@ -48,6 +47,7 @@
     box-shadow: 0px 5px 12px rgba(0,0,0,.15);
     transition: 0.3s;
     text-align: center;
+    max-width: 392px;
 }
 
 .tutorial-card:hover {
@@ -95,10 +95,15 @@
     background: #b58b63;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 5px; 
     margin-bottom: 20px;
 }
 
     .btn:hover {
         background: #9c7350;
     }
+
+.center-p {
+    margin-top: 20px;
+    text-align: center !important;
+}
