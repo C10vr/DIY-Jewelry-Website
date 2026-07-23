@@ -103,7 +103,7 @@
                     <asp:HyperLink ID="lnkDashboard" runat="server" NavigateUrl="~/Dashboard.aspx" Text="Dashboard" Style="text-decoration: none; color: inherit;" Visible="false" />
                 </h2>
                 <h2 id="h2Tutorial" runat="server" style="display: inline-block;">
-                    <asp:HyperLink ID="lnkTutorial" runat="server" NavigateUrl="~/Tutorial.aspx" Text="Tutorial" Style="text-decoration: none; color: inherit;" Visible="false" />
+                    <asp:HyperLink ID="lnkTutorial" runat="server" NavigateUrl="~/Courses.aspx" Text="Courses" Style="text-decoration: none; color: inherit;" Visible="false" />
                 </h2>
                 <h2>
                     <asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="~/Login.aspx" Text="Log In" Style="text-decoration: none; color: inherit;" />
