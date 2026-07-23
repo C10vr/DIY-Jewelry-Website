@@ -110,7 +110,6 @@
     <Content Include="App_Data\Database_log.ldf">
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
-    <Content Include="Tutorial.aspx" />
     <Content Include="Content\css\vertical-layout-light\style.css" />
     <Content Include="Content\css\welcome.css" />
     <Content Include="Content\css\body.css" />
@@ -183,13 +182,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Content Include="Content\css\bootstrap_override.css" />
-    <Compile Include="Tutorial.aspx.cs">
-      <DependentUpon>Tutorial.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Tutorial.aspx.designer.cs">
-      <DependentUpon>Tutorial.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Welcome.aspx.cs">
       <DependentUpon>Welcome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
