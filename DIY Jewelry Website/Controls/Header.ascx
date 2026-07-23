@@ -112,12 +112,6 @@
                 </h2>
             </div>
 
-            <!-- Responsive Hamburger --> 
-
-            <div class="hamburger">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-
         </div>
     </div>
 

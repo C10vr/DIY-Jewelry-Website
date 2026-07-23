@@ -83,17 +83,8 @@
 
                 <div class="col-1">
                     <h3>USEFUL LINKS</h3>
-                    <a href="#about">
+                    <a href="About.aspx">
                         <p>About</p>
-                    </a>
-                    <a href="#services">
-                        <p>Services</p>
-                    </a>
-                    <a href="#contact">
-                        <p>Contact</p>
-                    </a>
-                    <a href="#products">
-                        <p>Products</p>
                     </a>
                     <a href="#blog">
                         <p>Blog</p>
