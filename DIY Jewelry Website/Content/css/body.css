@@ -8,6 +8,17 @@
     width: 50%;
 }
 
+.content-paragraph {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 50%;
+}
+
+.subtitle {
+    margin-bottom: 15px;
+}
+
 section {
     padding: 40px;
 }
