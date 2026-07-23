@@ -258,7 +258,7 @@
                                     <%-- Edit opens modal to edit user inline --%>
                                     <asp:TemplateField HeaderText="Edit">
                                         <ItemTemplate>
-                                            <asp:Button ID="btnOpenEdit" runat="server" Text="Edit" CssClass="btn btn-sm btn-primary grid-action-btn" OnClientClick="openEditModal(this); return false;" />
+                                            <asp:HyperLink ID="hlEdit" runat="server" NavigateUrl='<%# Eval("Id", "EditUser.aspx?id={0}") %>' CssClass="btn btn-sm btn-primary grid-action-btn" Target="_self">Edit</asp:HyperLink>
                                         </ItemTemplate>
                                     </asp:TemplateField>
 
