@@ -7,21 +7,24 @@
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        // Use session-based check for simplicity and reliability across redirects
+
         bool isAuth = Session["Username"] != null;
-        if (lnkSignOut != null && lnkLogin != null && lnkSignOutLink != null)
+
+        var lnkProfile = FindControl("lnkProfile") as System.Web.UI.WebControls.HyperLink;
+
+        if (lnkSignOut != null && lnkLogin != null && lnkSignOutLink != null && lnkProfile != null)
         {
             bool insideForm = IsInsideServerForm(this);
 
-            // Show server-side LinkButton only when this control is inside a <form runat="server">.
-            // Otherwise, show a plain hyperlink that points to a Logout page.
+
             lnkSignOut.Visible = isAuth && insideForm;
             lnkSignOutLink.Visible = isAuth && !insideForm;
             lnkLogin.Visible = !isAuth;
+            lnkProfile.Visible = isAuth;
         }
     }
 
-    // Determine whether this control is contained within an HtmlForm with runat="server".
+    // see if control is contained
     private bool IsInsideServerForm(Control ctrl)
     {
         Control cur = ctrl;
@@ -37,17 +40,17 @@
     {
         try
         {
-            // Clear session and sign out
+            // sign out
             Session.Clear();
             Session.Abandon();
             FormsAuthentication.SignOut();
 
-            // Expire auth cookie explicitly
+            // auth cookie expire
             var authCookie = new HttpCookie(FormsAuthentication.FormsCookieName, "");
             authCookie.Expires = DateTime.Now.AddDays(-1);
             Response.Cookies.Add(authCookie);
 
-            // Expire session cookie
+            // expire session cookie
             var sessionCookie = new HttpCookie("ASP.NET_SessionId", "");
             sessionCookie.Expires = DateTime.Now.AddDays(-1);
             Response.Cookies.Add(sessionCookie);
@@ -70,12 +73,14 @@
             </div>
 
             <div class="top-bar">
+                <h2>
+                    <asp:HyperLink ID="lnkProfile" runat="server" NavigateUrl="~/Profile.aspx" Text="Profile" Style="text-decoration: none; color: inherit;" Visible="false" />
+                </h2>
                 <h2>Join Us</h2>
                 <h2>About Us</h2>
                 <h2>
                     <asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="~/Login.aspx" Text="Log In" Style="text-decoration: none; color: inherit;" />
                     <asp:LinkButton ID="lnkSignOut" runat="server" OnClick="lnkSignOut_Click" Visible="false" Style="text-decoration: none; color: inherit;">Sign Out</asp:LinkButton>
-                    <%-- Fallback for pages that do not host a server-side <form>: render a regular link to a logout endpoint --%>
                     <asp:HyperLink ID="lnkSignOutLink" runat="server" NavigateUrl="~/Logout.aspx" Visible="false" Style="text-decoration: none; color: inherit;">Sign Out</asp:HyperLink>
                 </h2>
             </div>
