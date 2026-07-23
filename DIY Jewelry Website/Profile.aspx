@@ -28,7 +28,7 @@
         <form id="form1" runat="server">
             <div class="login-wrapper">
                 <div class="registration-box">
-                    <h2>My Profile</h2>
+                    <h2>My Profile (Member)</h2>
 
                     <asp:Label ID="lblMessage" runat="server" ForeColor="Red" Style="display: block; margin-bottom: 15px;"></asp:Label>
 
