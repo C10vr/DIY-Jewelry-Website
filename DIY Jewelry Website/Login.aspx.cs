@@ -41,28 +41,26 @@ namespace DIY_Jewelry_Website
                         Session["Username"] = txtUsername.Text.Trim();
                         Session["UserType"] = userType;
 
-                        // Create forms auth ticket so the whole site knows the user and role
-                        var ticket = new FormsAuthenticationTicket(1,
-                            txtUsername.Text.Trim(),
-                            DateTime.Now,
-                            DateTime.Now.AddHours(8),
-                            false,
-                            userType.ToString()); // store userType in UserData
+                        // Only create an auth ticket for valid user types (1 = user, 2 = admin)
+                        if (userType == 2 || userType == 1)
+                        {
+                            // Create forms auth ticket so the whole site knows the user and role
+                            var ticket = new FormsAuthenticationTicket(1,
+                                txtUsername.Text.Trim(),
+                                DateTime.Now,
+                                DateTime.Now.AddHours(8),
+                                false,
+                                userType.ToString()); // store userType in UserData
 
-                        string encrypted = FormsAuthentication.Encrypt(ticket);
-                        var cookie = new HttpCookie(FormsAuthentication.FormsCookieName, encrypted)
-                        {
-                            HttpOnly = true
-                        };
-                        Response.Cookies.Add(cookie);
+                            string encrypted = FormsAuthentication.Encrypt(ticket);
+                            var cookie = new HttpCookie(FormsAuthentication.FormsCookieName, encrypted)
+                            {
+                                HttpOnly = true
+                            };
+                            Response.Cookies.Add(cookie);
 
-                        if (userType == 2)
-                        {
-                            Response.Redirect("Welcome.aspx");
-                        }
-                        else if (userType == 1)
-                        {
-                            Response.Redirect("Welcome.aspx");
+                            // Force navigation to Welcome.aspx after login (ignore any ReturnUrl)
+                            Response.Redirect(ResolveUrl("~/Welcome.aspx"), true);
                         }
                         else
                         {
