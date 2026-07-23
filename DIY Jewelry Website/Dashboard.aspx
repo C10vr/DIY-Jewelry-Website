@@ -1,4 +1,5 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
+<%@ Page Language="C#" AutoEventWireup="true" %>
 <html lang="en">
 
     <head runat="server">
@@ -30,6 +31,24 @@
 
         <%-- Scripts --%>
         <script src="https://kit.fontawesome.com/cf1d4ca410.js" crossorigin="anonymous"></script>
+        <style>
+            /* Make bordered table scroll when more than 7 rows */
+            .table-scroll-container {
+                /* overflow-y will be set dynamically when needed */
+                overflow-y: visible;
+            }
+            .table-scroll-container table {
+                margin-bottom: 0; /* avoid extra gap inside scroll area */
+            }
+            /* Small fixed-width action buttons in grid */
+            .grid-action-btn {
+                padding: .15rem .35rem;
+                font-size: .78rem;
+                width: 48px;
+                min-width: 48px;
+                text-align: center;
+            }
+        </style>
 
     </head>
 
@@ -42,6 +61,8 @@
         <uc:Header runat="server" id="SiteHeader" />
 
         <%-- End of Header --%>
+
+        <form id="form1" runat="server">
 
         <div class="container-scroller">
         <!-- partial -->
@@ -204,183 +225,92 @@
             
             <!-- partial -->
             <div class="main-panel main-panel-override">
-            <div class="content-wrapper">
+            <div class="content-wrapper">  
                 <div class="col-lg-12 grid-margin stretch-card">
                     <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Bordered table</h4>
+                        <h4 class="card-title">Welcome Back, Admin</h4>
                         <p class="card-description">
-                        Add class <code>.table-bordered</code>
+                        List of Users <code> Descending Order</code>
                         </p>
-                        <div class="table-responsive pt-3">
-                        <table class="table table-bordered">
-                            <thead>
-                            <tr>
-                                <th>
-                                #
-                                </th>
-                                <th>
-                                First name
-                                </th>
-                                <th>
-                                Progress
-                                </th>
-                                <th>
-                                Amount
-                                </th>
-                                <th>
-                                Deadline
-                                </th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>
-                                1
-                                </td>
-                                <td>
-                                Herman Beck
-                                </td>
-                                <td>
-                                <div class="progress">
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                </td>
-                                <td>
-                                $ 77.99
-                                </td>
-                                <td>
-                                May 15, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                2
-                                </td>
-                                <td>
-                                Messsy Adam
-                                </td>
-                                <td>
-                                <div class="progress">
-                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                </td>
-                                <td>
-                                $245.30
-                                </td>
-                                <td>
-                                July 1, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                3
-                                </td>
-                                <td>
-                                John Richards
-                                </td>
-                                <td>
-                                <div class="progress">
-                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                </td>
-                                <td>
-                                $138.00
-                                </td>
-                                <td>
-                                Apr 12, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                4
-                                </td>
-                                <td>
-                                Peter Meggik
-                                </td>
-                                <td>
-                                <div class="progress">
-                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                </td>
-                                <td>
-                                $ 77.99
-                                </td>
-                                <td>
-                                May 15, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                5
-                                </td>
-                                <td>
-                                Edward
-                                </td>
-                                <td>
-                                <div class="progress">
-                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                </td>
-                                <td>
-                                $ 160.25
-                                </td>
-                                <td>
-                                May 03, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                6
-                                </td>
-                                <td>
-                                John Doe
-                                </td>
-                                <td>
-                                <div class="progress">
-                                    <div class="progress-bar bg-info" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                </td>
-                                <td>
-                                $ 123.21
-                                </td>
-                                <td>
-                                April 05, 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                7
-                                </td>
-                                <td>
-                                Henry Tom
-                                </td>
-                                <td>
-                                <div class="progress">
-                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                </td>
-                                <td>
-                                $ 150.00
-                                </td>
-                                <td>
-                                June 16, 2015
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
+                        <div class="mb-2">
+                            <asp:HyperLink ID="hlCreateUser" runat="server" NavigateUrl="CreateUser.aspx" CssClass="btn btn-sm btn-success">Create User</asp:HyperLink>
+                        </div>
+                        <div class="table-responsive pt-3 table-scroll-container">
+                            <!-- SqlDataSource filtered to UserType = 1 -->
+                            <asp:SqlDataSource ID="SqlDataSourceUsers" runat="server"
+                                ConnectionString="<%$ ConnectionStrings:ConnectionString %>"
+                                SelectCommand="SELECT Id, FullName, EmailAddress, Username, UserType FROM userTable WHERE UserType = @UserType ORDER BY Username DESC"
+                                DeleteCommand="DELETE FROM userTable WHERE Id = @Id">
+                                <SelectParameters>
+                                    <asp:Parameter Name="UserType" Type="Int32" DefaultValue="1" />
+                                </SelectParameters>
+                                <DeleteParameters>
+                                    <asp:Parameter Name="Id" Type="Int32" />
+                                </DeleteParameters>
+                            </asp:SqlDataSource>
+
+                            <asp:GridView ID="GridViewUsers" runat="server" DataSourceID="SqlDataSourceUsers" AutoGenerateColumns="false" CssClass="table table-bordered" DataKeyNames="Id">
+                                <Columns>
+                                    <asp:BoundField DataField="Id" HeaderText="ID" ReadOnly="true" />
+                                    <asp:BoundField DataField="FullName" HeaderText="Full Name" />
+                                    <asp:BoundField DataField="EmailAddress" HeaderText="Email" />
+                                    <asp:BoundField DataField="Username" HeaderText="Username" />
+                                    <asp:BoundField DataField="UserType" HeaderText="User Type" />
+
+                                    <%-- Edit opens modal to edit user inline --%>
+                                    <asp:TemplateField HeaderText="Edit">
+                                        <ItemTemplate>
+                                            <asp:HyperLink ID="hlEdit" runat="server" NavigateUrl='<%# ResolveUrl("~/EditUser.aspx?id=" + Eval("Id")) %>' CssClass="btn btn-sm btn-primary grid-action-btn" Target="_self">Edit</asp:HyperLink>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+
+                                    <%-- Delete button uses SqlDataSource DeleteCommand and the DataKey (Id) --%>
+                                    <asp:TemplateField HeaderText="Delete">
+                                        <ItemTemplate>
+                                            <asp:Button ID="btnDelete" runat="server" CommandName="Delete" Text="Delete" CssClass="btn btn-sm btn-danger grid-action-btn" OnClientClick="return confirm('Are you sure you want to delete this user?');" />
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                </Columns>
+                            </asp:GridView>
                         </div>
                     </div>
                     </div>
                 </div>
-                
-                
+                <!-- Edit Modal -->
+                <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="editModalLabel">Edit User</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <asp:HiddenField ID="hfEditId" runat="server" />
+                                <div class="mb-3">
+                                    <label class="form-label">Full Name</label>
+                                    <asp:TextBox ID="txtEditFullName" runat="server" CssClass="form-control"></asp:TextBox>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Email</label>
+                                    <asp:TextBox ID="txtEditEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Username</label>
+                                    <asp:TextBox ID="txtEditUsername" runat="server" CssClass="form-control"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <asp:Button ID="btnSaveEdit" runat="server" Text="Save" CssClass="btn btn-primary" OnClick="btnSaveEdit_Click" />
+                            </div>
+                        </div>
                     </div>
-                </div>
                 </div>
             </div>
             <!-- content-wrapper ends -->
-
+            </div>
+        </div>
             <footer>
                 <p><h6>&copy; 2026 Knot Fine Co. Company & Co. All rights reserved.</h6></p>
             </footer>
@@ -391,6 +321,8 @@
         <!-- page-body-wrapper ends -->
         </div>
         <!-- container-scroller -->
+        </form>
+
         <!-- plugins:js -->
         <script src="/Content/vendors/js/vendor.bundle.base.js"></script>
         <!-- endinject -->
@@ -401,6 +333,103 @@
         <script src="/Content/js/off-canvas.js"></script>
         <script src="/Content/js/hoverable-collapse.js"></script>
         <script src="/Content/js/template.js"></script>
+        <script>
+            // Enable vertical scrolling for the bordered table when rows > 7
+            document.addEventListener('DOMContentLoaded', function () {
+                try {
+                    var container = document.querySelector('.table-scroll-container');
+                    if (!container) return;
+                    var tbody = container.querySelector('tbody');
+                    if (!tbody) return;
+                    var rows = tbody.querySelectorAll('tr');
+                    if (rows.length > 7) {
+                        // measure a single row height and header height
+                        var rowHeight = rows[0].offsetHeight || 48;
+                        var thead = container.querySelector('thead');
+                        var theadHeight = thead ? thead.offsetHeight : 56;
+                        // set max-height to show 7 rows + the header
+                        container.style.maxHeight = (rowHeight * 7 + theadHeight) + 'px';
+                        container.style.overflowY = 'auto';
+                    }
+                } catch (e) {
+                    // fail silently
+                }
+            });
+
+            // Open edit modal and populate fields from the clicked row
+            function openEditModal(btn) {
+                try {
+                    var tr = btn.closest('tr');
+                    if (!tr) return;
+                    var cells = tr.querySelectorAll('td');
+                    if (!cells || cells.length < 4) return;
+
+                    // Cells order: ID, FullName, EmailAddress, Username, UserType, Edit, Delete
+                    var id = cells[0].innerText.trim();
+                    var fullName = cells[1].innerText.trim();
+                    var email = cells[2].innerText.trim();
+                    var username = cells[3].innerText.trim();
+
+                    // Set values to server controls by ClientID
+                    var hf = document.getElementById('<%= hfEditId.ClientID %>');
+                    if (hf) hf.value = id;
+                    var txtFull = document.getElementById('<%= txtEditFullName.ClientID %>');
+                    if (txtFull) txtFull.value = fullName;
+                    var txtEmail = document.getElementById('<%= txtEditEmail.ClientID %>');
+                    if (txtEmail) txtEmail.value = email;
+                    var txtUser = document.getElementById('<%= txtEditUsername.ClientID %>');
+                    if (txtUser) txtUser.value = username;
+
+                    // Show bootstrap modal (Bootstrap 5)
+                    var modalEl = document.getElementById('editModal');
+                    if (modalEl && typeof bootstrap !== 'undefined') {
+                        var bsModal = bootstrap.Modal.getOrCreateInstance(modalEl);
+                        bsModal.show();
+                    }
+                } catch (e) {
+                    // fail silently
+                }
+            }
+        </script>
+        <script runat="server">
+            protected void btnSaveEdit_Click(object sender, EventArgs e)
+            {
+                try
+                {
+                    int id = 0;
+                    if (!int.TryParse(hfEditId.Value, out id)) return;
+
+                    string full = txtEditFullName.Text.Trim();
+                    string email = txtEditEmail.Text.Trim();
+                    string username = txtEditUsername.Text.Trim();
+
+                    string cs = System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+                    using (System.Data.SqlClient.SqlConnection con = new System.Data.SqlClient.SqlConnection(cs))
+                    {
+                        con.Open();
+                        string sql = "UPDATE userTable SET FullName=@FullName, EmailAddress=@Email, Username=@Username WHERE Id=@Id";
+                        using (System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand(sql, con))
+                        {
+                            cmd.Parameters.AddWithValue("@FullName", full);
+                            cmd.Parameters.AddWithValue("@Email", email);
+                            cmd.Parameters.AddWithValue("@Username", username);
+                            cmd.Parameters.AddWithValue("@Id", id);
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+
+                    // Refresh grid
+                    GridViewUsers.DataBind();
+
+                    // Close modal via script
+                    System.Web.UI.ScriptManager.RegisterStartupScript(this, this.GetType(), "closeModal", "var m = bootstrap.Modal.getInstance(document.getElementById('editModal')); if(m) m.hide();", true);
+                }
+                catch (Exception)
+                {
+                    // swallow or log
+                }
+            }
+        </script>
         <script src="/Content/js/settings.js"></script>
         <script src="/Content/js/todolist.js"></script>
         <!-- endinject -->
