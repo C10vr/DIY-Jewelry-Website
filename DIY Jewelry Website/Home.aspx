@@ -34,48 +34,44 @@
                 <h2 class="content">Our Products</h2>
                 <br>
                 <div class="feature_box" href="#eplant">
-                    <img src="images/eplant_logo.png" alt="Why Choose Knot Fine Co." class="feature-img">
-                    <h3>EPlant</h3>
-                    <p>Stay notified from the latest rise in stocks with our advanced data-driven security algorithms.</p>
+                    <img src="Content/images/wood.jpg" alt="Why Choose Knot Fine Co." class="feature-img">
+                    <div class="feature-box-content">
+                        <h3>Local Made Bracelet</h3>
+                        <p>$67</p>
+                    </div>
                 </div>
-                <div class="feature_box" id="oddOne">
-                    <img src="images/einvest_logo.png" alt="User Friendly" class="feature-img">
-                    <h3>EInvest</h3>
-                    <p>Investing in large amount of quantity? EInvest is here to create a investing schedule for your benefits.</p>
+                <div class="feature_box" href="#eplant">
+                    <img src="Content/images/earings.png" alt="Why Choose Knot Fine Co." class="feature-img">
+                    <div class="feature-box-content">
+                        <h3>Natural Pearl Earring</h3>
+                        <p>$99</p>
+                    </div>
                 </div>
-                <div class="feature_box">
-                    <img src="images/eanalysis_logo.jpg" alt="Weekly Report" class="feature-img">
-                    <h3>EAnalysis</h3>
-                    <p>Can't figure what,when, and how to invest in stocks? EAnalysis helps analyze the current trend in stocks.</p>
-                </div>
-                <div class="feature_box">
-                    <img src="images/ebot_logo.png" alt="Weekly Report" class="feature-img">
-                    <h3>EBot</h3>
-                    <p>EBot can be implemented in your website, application or your project, helping to keep track of the current trend in stocks & crypto!</p>
-                </div>
-                <div class="feature_box">
-                    <img src="images/coming_soon.gif" alt="Weekly Report" class="feature-img">
-                    <h3>Coming Soon</h3>
-                    <p>We are currently developing something new...</p>
+                <div class="feature_box" href="#eplant">
+                    <img src="Content/images/box.png" alt="Why Choose Knot Fine Co." class="feature-img">
+                    <div class="feature-box-content">
+                        <h3>Wedding Jewelry Box</h3>
+                        <p>$120</p>
+                    </div>
                 </div>
             </section>
             <br>
-            <section id="features">
-                <h2 class="content">Why Choose Knot Fine Co.</h2>
+            <section runat="server" id="courseSection">
+                <h2 class="content">Our Courses</h2>
                 <div class="feature_box">
-                    <img src="images/realtimeanalysis.gif" alt="Why Choose Knot Fine Co." class="feature-img">
-                    <h3>Real-Time Analysis</h3>
-                    <p>Stay notified from the latest threats with our advanced data-driven security algorithms.</p>
-                </div>
-                <div class="feature_box" id="oddOne">
-                    <img src="images/userfriendly.gif" alt="User Friendly" class="feature-img">
-                    <h3>User Friendly</h3>
-                    <p>Simple UI with powerful features, suitable for everyone.</p>
+                    <img src="/Content/images/bracelet.png" alt="Bracelet" class="feature-img">
+                    <h3>DIY Bracelet</h3>
+                    <p>Create your own handmade bracelet with easy step-by-step instructions.</p>
                 </div>
                 <div class="feature_box">
-                    <img src="images/report_gif.gif" alt="Weekly Report" class="feature-img">
-                    <h3>Weekly Report</h3>
-                    <p>Given to those who are using in big organizations.</p>
+                    <img src="/Content/images/earings.png" alt="Earrings" class="feature-img">
+                    <h3>DIY Earrings</h3>
+                    <p>Create your own handmade earrings with easy step-by-step instructions.</p>
+                </div>
+                <div class="feature_box">
+                    <img src="/Content/images/ring.png" alt="Rings" class="feature-img">
+                    <h3>DIY Rings</h3>
+                    <p>Create your own handmade rings with easy step-by-step instructions.</p>
                 </div>
             </section>
 
