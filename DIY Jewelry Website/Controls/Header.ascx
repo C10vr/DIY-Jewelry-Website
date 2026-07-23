@@ -19,15 +19,30 @@
         lnkSignOutLink.Visible = isAuth && !insideForm;
         lnkLogin.Visible = !isAuth;
 
-        // show Dashboard for userType == "2"; always show Profile when authenticated
+        // show Dashboard for userType == "2"; show Tutorial for userType == "1"; always show Profile when authenticated
         bool showDashboard = isAuth && userType == "2";
         lnkDashboard.Visible = showDashboard;
+
+        bool showTutorial = isAuth && userType == "1";
+        // lnkTutorial control is declared in the markup below
+        System.Web.UI.WebControls.HyperLink tutorialLink = this.FindControl("lnkTutorial") as System.Web.UI.WebControls.HyperLink;
+        if (tutorialLink != null)
+        {
+            tutorialLink.Visible = showTutorial;
+        }
 
         // hide the whole h2 container when not a type-2 user
         var h2DashboardCtrl = this.FindControl("h2Dashboard") as System.Web.UI.HtmlControls.HtmlGenericControl;
         if (h2DashboardCtrl != null)
         {
             h2DashboardCtrl.Visible = showDashboard;
+        }
+
+        // hide the whole h2 container for tutorial when not a type-1 user
+        var h2TutorialCtrl = this.FindControl("h2Tutorial") as System.Web.UI.HtmlControls.HtmlGenericControl;
+        if (h2TutorialCtrl != null)
+        {
+            h2TutorialCtrl.Visible = showTutorial;
         }
         lnkProfile.Visible = isAuth;
     }
@@ -86,6 +101,9 @@
                 </h2>
                 <h2 id="h2Dashboard" runat="server" style="display: inline-block;">
                     <asp:HyperLink ID="lnkDashboard" runat="server" NavigateUrl="~/Dashboard.aspx" Text="Dashboard" Style="text-decoration: none; color: inherit;" Visible="false" />
+                </h2>
+                <h2 id="h2Tutorial" runat="server" style="display: inline-block;">
+                    <asp:HyperLink ID="lnkTutorial" runat="server" NavigateUrl="~/Tutorial.aspx" Text="Tutorial" Style="text-decoration: none; color: inherit;" Visible="false" />
                 </h2>
                 <h2>
                     <asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="~/Login.aspx" Text="Log In" Style="text-decoration: none; color: inherit;" />
