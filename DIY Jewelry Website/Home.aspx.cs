@@ -19,6 +19,16 @@ namespace DIY_Jewelry_Website
             Response.Cache.SetRevalidation(HttpCacheRevalidation.AllCaches);
             Response.Cache.SetValidUntilExpires(false);
 
+            // Show Courses only for Registered Users (UserType = 1)
+            if (Session["UserType"] != null && Session["UserType"].ToString() == "1")
+            {
+                courseSection.Visible = true;
+            }
+            else
+            {
+                courseSection.Visible = false;
+            }
+
         }
     }
 }
