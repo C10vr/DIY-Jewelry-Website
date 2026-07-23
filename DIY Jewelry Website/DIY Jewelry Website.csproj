@@ -103,6 +103,7 @@
     <Content Include="App_Data\Database_log.ldf">
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <Content Include="CreateUser.aspx" />
     <Content Include="EditUser.aspx" />
     <Content Include="Tutorial.aspx" />
     <Content Include="Content\css\body.css" />

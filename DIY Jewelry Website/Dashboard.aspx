@@ -233,6 +233,9 @@
                         <p class="card-description">
                         List of Users <code> Descending Order</code>
                         </p>
+                        <div class="mb-2">
+                            <asp:HyperLink ID="hlCreateUser" runat="server" NavigateUrl="CreateUser.aspx" CssClass="btn btn-sm btn-success">Create User</asp:HyperLink>
+                        </div>
                         <div class="table-responsive pt-3 table-scroll-container">
                             <!-- SqlDataSource filtered to UserType = 1 -->
                             <asp:SqlDataSource ID="SqlDataSourceUsers" runat="server"
@@ -258,7 +261,7 @@
                                     <%-- Edit opens modal to edit user inline --%>
                                     <asp:TemplateField HeaderText="Edit">
                                         <ItemTemplate>
-                                            <asp:HyperLink ID="hlEdit" runat="server" NavigateUrl='<%# Eval("Id", "EditUser.aspx?id={0}") %>' CssClass="btn btn-sm btn-primary grid-action-btn" Target="_self">Edit</asp:HyperLink>
+                                            <asp:HyperLink ID="hlEdit" runat="server" NavigateUrl='<%# ResolveUrl("~/EditUser.aspx?id=" + Eval("Id")) %>' CssClass="btn btn-sm btn-primary grid-action-btn" Target="_self">Edit</asp:HyperLink>
                                         </ItemTemplate>
                                     </asp:TemplateField>
 
