@@ -34,7 +34,7 @@
                 <h2 class="content">Our Products</h2>
                 <br>
                 <div class="feature_box" href="#eplant">
-                    <img src="images/eplant_logo.png" alt="Why Choose Knot Fine Co." class="feature-img">
+                    <img src="Content/images/wood.jpg" alt="Why Choose Knot Fine Co." class="feature-img">
                     <h3>EPlant</h3>
                     <p>Stay notified from the latest rise in stocks with our advanced data-driven security algorithms.</p>
                 </div>
