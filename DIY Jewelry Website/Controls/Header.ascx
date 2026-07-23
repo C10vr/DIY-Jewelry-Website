@@ -22,6 +22,13 @@
         // show Dashboard for userType == "2"; always show Profile when authenticated
         bool showDashboard = isAuth && userType == "2";
         lnkDashboard.Visible = showDashboard;
+
+        // hide the whole h2 container when not a type-2 user
+        var h2DashboardCtrl = this.FindControl("h2Dashboard") as System.Web.UI.HtmlControls.HtmlGenericControl;
+        if (h2DashboardCtrl != null)
+        {
+            h2DashboardCtrl.Visible = showDashboard;
+        }
         lnkProfile.Visible = isAuth;
     }
 
@@ -77,7 +84,7 @@
                 <h2>
                     <asp:HyperLink ID="lnkProfile" runat="server" NavigateUrl="~/Profile.aspx" Text="Profile" Style="text-decoration: none; color: inherit;" Visible="false" />
                 </h2>
-                <h2>
+                <h2 id="h2Dashboard" runat="server" style="display: inline-block;">
                     <asp:HyperLink ID="lnkDashboard" runat="server" NavigateUrl="~/Dashboard.aspx" Text="Dashboard" Style="text-decoration: none; color: inherit;" Visible="false" />
                 </h2>
                 <h2>
