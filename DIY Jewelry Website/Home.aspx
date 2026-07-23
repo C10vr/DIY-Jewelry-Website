@@ -35,28 +35,24 @@
                 <br>
                 <div class="feature_box" href="#eplant">
                     <img src="Content/images/wood.jpg" alt="Why Choose Knot Fine Co." class="feature-img">
-                    <h3>EPlant</h3>
-                    <p>Stay notified from the latest rise in stocks with our advanced data-driven security algorithms.</p>
+                    <div class="feature-box-content">
+                        <h3>Local Made Bracelet</h3>
+                        <p>$67</p>
+                    </div>
                 </div>
-                <div class="feature_box" id="oddOne">
-                    <img src="images/einvest_logo.png" alt="User Friendly" class="feature-img">
-                    <h3>EInvest</h3>
-                    <p>Investing in large amount of quantity? EInvest is here to create a investing schedule for your benefits.</p>
+                <div class="feature_box" href="#eplant">
+                    <img src="Content/images/earings.png" alt="Why Choose Knot Fine Co." class="feature-img">
+                    <div class="feature-box-content">
+                        <h3>Natural Pearl Earring</h3>
+                        <p>$99</p>
+                    </div>
                 </div>
-                <div class="feature_box">
-                    <img src="images/eanalysis_logo.jpg" alt="Weekly Report" class="feature-img">
-                    <h3>EAnalysis</h3>
-                    <p>Can't figure what,when, and how to invest in stocks? EAnalysis helps analyze the current trend in stocks.</p>
-                </div>
-                <div class="feature_box">
-                    <img src="images/ebot_logo.png" alt="Weekly Report" class="feature-img">
-                    <h3>EBot</h3>
-                    <p>EBot can be implemented in your website, application or your project, helping to keep track of the current trend in stocks & crypto!</p>
-                </div>
-                <div class="feature_box">
-                    <img src="images/coming_soon.gif" alt="Weekly Report" class="feature-img">
-                    <h3>Coming Soon</h3>
-                    <p>We are currently developing something new...</p>
+                <div class="feature_box" href="#eplant">
+                    <img src="Content/images/box.png" alt="Why Choose Knot Fine Co." class="feature-img">
+                    <div class="feature-box-content">
+                        <h3>Wedding Jewelry Box</h3>
+                        <p>$120</p>
+                    </div>
                 </div>
             </section>
             <br>
