@@ -112,12 +112,6 @@
                 </h2>
             </div>
 
-            <!-- Responsive Hamburger --> 
-
-            <div class="hamburger">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-
         </div>
     </div>
 
@@ -127,10 +121,10 @@
 
         <div>
             <h1><b>Knot Fine Co.</b></h1>
-            <p class="slogan">The Money That Grows.</p>
+            <p class="slogan">You will be fine with our jewelry</p>
         </div>
         <div class="why-us-button">
-            <a href="#features" onclick="scrollToInfo()" class="cta-button">Why Us?</a>
+            <a href="About.aspx" class="cta-button">Why us</a>
         </div>
 
     </div>
