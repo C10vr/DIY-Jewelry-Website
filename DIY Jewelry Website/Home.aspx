@@ -61,21 +61,21 @@
             </section>
             <br>
             <section id="features">
-                <h2 class="content">Why Choose Knot Fine Co.</h2>
+                <h2 class="content">Our Courses</h2>
                 <div class="feature_box">
-                    <img src="images/realtimeanalysis.gif" alt="Why Choose Knot Fine Co." class="feature-img">
-                    <h3>Real-Time Analysis</h3>
-                    <p>Stay notified from the latest threats with our advanced data-driven security algorithms.</p>
-                </div>
-                <div class="feature_box" id="oddOne">
-                    <img src="images/userfriendly.gif" alt="User Friendly" class="feature-img">
-                    <h3>User Friendly</h3>
-                    <p>Simple UI with powerful features, suitable for everyone.</p>
+                    <img src="/Content/images/bracelet.png" alt="Bracelet" class="feature-img">
+                    <h3>DIY Bracelet</h3>
+                    <p>Create your own handmade bracelet with easy step-by-step instructions.</p>
                 </div>
                 <div class="feature_box">
-                    <img src="images/report_gif.gif" alt="Weekly Report" class="feature-img">
-                    <h3>Weekly Report</h3>
-                    <p>Given to those who are using in big organizations.</p>
+                    <img src="/Content/images/earings.png" alt="Earrings" class="feature-img">
+                    <h3>DIY Earrings</h3>
+                    <p>Create your own handmade earrings with easy step-by-step instructions.</p>
+                </div>
+                <div class="feature_box">
+                    <img src="/Content/images/ring.png" alt="Rings" class="feature-img">
+                    <h3>DIY Rings</h3>
+                    <p>Create your own handmade rings with easy step-by-step instructions.</p>
                 </div>
             </section>
 
