@@ -44,6 +44,23 @@
         {
             h2TutorialCtrl.Visible = showTutorial;
         }
+
+        // show Quiz link for userType == "1"
+        bool showQuiz = isAuth && userType == "1";
+        // set hyperlink visibility directly (controls are declared in this user control)
+        try
+        {
+            lnkQuiz.Visible = showQuiz;
+        }
+        catch { }
+
+        // also toggle the h2 container for the quiz link if present
+        var h2QuizCtrl = this.FindControl("h2Quiz") as System.Web.UI.HtmlControls.HtmlGenericControl;
+        if (h2QuizCtrl != null)
+        {
+            h2QuizCtrl.Visible = showQuiz;
+        }
+
         lnkProfile.Visible = isAuth;
     }
 
@@ -104,6 +121,9 @@
                 </h2>
                 <h2 id="h2Tutorial" runat="server" style="display: inline-block;">
                     <asp:HyperLink ID="lnkTutorial" runat="server" NavigateUrl="~/Courses.aspx" Text="Courses" Style="text-decoration: none; color: inherit;" Visible="false" />
+                </h2>
+                <h2 id="h2Quiz" runat="server" style="display: inline-block;">
+                    <asp:HyperLink ID="lnkQuiz" runat="server" NavigateUrl="~/Question.aspx" Text="Quiz" Style="text-decoration: none; color: inherit;" Visible="false" />
                 </h2>
                 <h2>
                     <asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="~/Login.aspx" Text="Log In" Style="text-decoration: none; color: inherit;" />
