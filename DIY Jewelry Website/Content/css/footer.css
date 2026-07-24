@@ -35,12 +35,11 @@ fab {
 }
 
 form input {
-    width: 400px;
-    height: 45px;
     border-radius: 4px;
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
+    margin-right: 10px;
     outline: none;
     border: none;
 }

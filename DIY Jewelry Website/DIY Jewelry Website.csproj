@@ -121,6 +121,7 @@
     <Content Include="Content\images\Mini_Logo.png" />
     <Content Include="Controls\Header.ascx" />
     <Content Include="Dashboard.aspx" />
+    <Content Include="Question.aspx" />
     <Content Include="Welcome.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="favicon.ico" />
@@ -182,6 +183,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Content Include="Content\css\bootstrap_override.css" />
+    <Compile Include="Question.aspx.cs">
+      <DependentUpon>Question.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Question.aspx.designer.cs">
+      <DependentUpon>Question.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Welcome.aspx.cs">
       <DependentUpon>Welcome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
