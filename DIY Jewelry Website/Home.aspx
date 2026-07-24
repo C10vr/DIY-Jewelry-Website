@@ -74,38 +74,6 @@
                     <p>Create your own handmade rings with easy step-by-step instructions.</p>
                 </div>
             </section>
-
-            <div class="footer">
-
-                <div class="col-1">
-                    <h3>USEFUL LINKS</h3>
-                    <a href="About.aspx">
-                        <p>About</p>
-                    </a>
-                    <a href="#blog">
-                        <p>Blog</p>
-                    </a>
-                </div>
-
-                <div class="col-2">
-                    <h3>NEWSLETTER</h3>
-                    <form>
-                        <input type="email" placeholder="Your Email Address:" required>
-                        <br>
-                        <button type="submit">Subscribe Now</button>
-                    </form>
-                </div>
-                <div class="col-3">
-                    <h3>CONTACT</h3>
-                    <p>123, XYZ Road <br>Kualar Lumpur, Malaysia, MY</p>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
-                        <a href="https://x.com/?&"><i class="fab fa-x-twitter"></i></a>
-                        <a href="https://www.instagram.com/ethan.jz/"><i class="fab fa-instagram"></i></a>
-                        <a href="#snapchat"><i class="fab fa-snapchat"></i></a>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <footer>
