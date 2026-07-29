@@ -85,7 +85,7 @@
     </form>
 
     <script runat="server">
-        protected void btnCreate_Click(object sender, EventArgs e)
+        protected void btnCreate_Click(object sender, EventArgs e) //Create new user
         {
             try
             {
